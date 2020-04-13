@@ -7,7 +7,6 @@ import {
   faAnchor,
 } from '@fortawesome/free-solid-svg-icons'
 import { calculateAge } from '../utils'
-import Emoji from '../components/Emoji'
 
 export const TITLE = 'Oke Schwien'
 
@@ -19,24 +18,24 @@ export const ABOUT_TEXT = (
       <Link url='https://en.wikipedia.org/wiki/Moin'>
         <i>Moin</i> [mɔɪ̯n]
       </Link>{' '}
-      is how you say <i>hello</i> <Emoji label='hello'>🙋‍♂️</Emoji> in northern
-      Germany, where I was born and raised.
+      is how you say <i>hello</i> in northern Germany, where I was born and
+      raised.
     </p>
     <p>
       My name is Oke, I am {calculateAge(new Date('1991-01-11'))} years old,
       currently living and working in the amazing city{' '}
       <Link url='https://en.wikipedia.org/wiki/Hamburg' icon={faAnchor}>
         Hamburg
-      </Link>{' '}
-      in Germany.
+      </Link>
+      {''}, Germany.
     </p>
     <p>
-      I am a software guy <Emoji label='software'>👨‍💻</Emoji> with a special
-      interest in web frontend technologies, UX and product development.
+      I am a software guy with a special interest in web frontend technologies,
+      UX and product development.
     </p>
     <p>
       Alongside software engineering I love to spin some Techno records behind
-      the decks <Emoji label='dj'>🎧</Emoji>, together with my{' '}
+      the decks, together with my{' '}
       <Link url='https://basiskollektiv.de/' icon={faMeteor}>
         Basis Kollektiv
       </Link>{' '}
@@ -155,9 +154,8 @@ export const WORK_ITEMS = {
           <Link url='https://basiskollektiv.de/' icon={faMeteor}>
             Basis Kollektiv
           </Link>{' '}
-          crew: a bunch of lovely people <Emoji label='heart'>🖤</Emoji>{' '}
-          enjoying electronic music and organizing parties a few well-chosen
-          times a year.
+          crew: a bunch of lovely people enjoying electronic music and
+          organizing parties a few well-chosen times a year.
         </>
       ),
     },
@@ -168,19 +166,14 @@ export const WORK_ITEMS = {
           A web app to follow the present and past results of the{' '}
           <Link url='https://eden-monitor.de/'>EDEN ISS</Link> project: a
           greenhouse in Antartica with the goal to advance controlled
-          environmental agriculture <Emoji label='herb'>🌿</Emoji> technologies.
+          environmental agriculture technologies.
         </>
       ),
     },
     {
       key: 'openvocs',
-      value: (
-        <>
-          An open source voice communication system introducing state-of-the-art
-          communication technologies <Emoji label='satellite'>🛰</Emoji> to
-          mission control centers.
-        </>
-      ),
+      value:
+        'An open source voice communication system introducing state-of-the-art communication technologies to mission control centers.',
     },
   ],
 }

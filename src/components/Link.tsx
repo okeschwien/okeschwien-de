@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { COLOR_TEXT_LINK_HOVER, COLOR_TEXT_LINK_DEFAULT } from '../meta/colors'
-import { mediaQueryDesktop } from '../meta/mediaQueries'
+import { mediaQueryDesktop, isMobileViewport } from '../meta/mediaQueries'
 import { transitionColor } from '../meta/animations'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink, IconDefinition } from '@fortawesome/free-solid-svg-icons'
@@ -32,10 +32,25 @@ export interface LinkProps {
   icon?: IconDefinition
 }
 
-const Link = ({ url, children, icon = faLink }: LinkProps & ChildrenProps) => (
-  <LinkStyled href={url} rel='noopener noreferrer' target='_blank'>
-    {children} <FontAwesomeIcon icon={icon} />
-  </LinkStyled>
-)
+const Link = ({ url, children, icon = faLink }: LinkProps & ChildrenProps) => {
+  const isMobile = isMobileViewport()
+  const [showSpace, setShowSpace] = React.useState(isMobile)
+
+  const toggleShowSpace = () => setShowSpace(isMobile || !showSpace)
+
+  return (
+    <LinkStyled
+      href={url}
+      rel='noopener noreferrer'
+      target='_blank'
+      onMouseEnter={toggleShowSpace}
+      onMouseLeave={toggleShowSpace}
+    >
+      {children}
+      {showSpace && ' '}
+      <FontAwesomeIcon icon={icon} />
+    </LinkStyled>
+  )
+}
 
 export default React.memo(Link)

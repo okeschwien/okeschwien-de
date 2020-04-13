@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header'
+import CurriculumVitae from './components/CurriculumVitae'
+import About from './components/About'
+import styled from '@emotion/styled'
+import { mediaQueryDesktop, BREAKPOINTS } from './meta/mediaQueries'
+import Work from './components/Work'
 
-function App() {
+const AppStyled = styled('div')`
+  width: 100%;
+  padding: 0 0 2rem 0;
+  ${mediaQueryDesktop} {
+    width: ${`${BREAKPOINTS.desktop}rem`};
+    margin: 0 auto;
+  }
+`
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppStyled>
+      <Header />
+      <About />
+      <CurriculumVitae />
+      <Work />
+    </AppStyled>
+  )
 }
 
-export default App;
+export default React.memo(App)

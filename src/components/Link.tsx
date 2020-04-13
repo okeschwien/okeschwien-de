@@ -32,16 +32,14 @@ export interface LinkProps {
   icon?: IconDefinition
 }
 
-const Link = ({ url, children, icon = faLink }: LinkProps & ChildrenProps) => {
-  return (
-    <LinkStyled href={url} rel='noopener noreferrer' target='_blank'>
-      {children}
-      <span className='link-icon'>
-        {' '}
-        <FontAwesomeIcon icon={icon} />
-      </span>
-    </LinkStyled>
-  )
-}
+const Link = ({ url, children, icon = faLink }: LinkProps & ChildrenProps) => (
+  <LinkStyled href={url} rel='noopener noreferrer' target='_blank'>
+    {children}
+    <span className='link-icon'>
+      {' '}
+      <FontAwesomeIcon icon={icon} />
+    </span>
+  </LinkStyled>
+)
 
 export default React.memo(Link)

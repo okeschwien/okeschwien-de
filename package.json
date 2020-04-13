@@ -1,6 +1,6 @@
 {
-  "name": "okeschwien-de",
-  "version": "1.0.0",
+  "name": "okeschwien-website",
+  "version": "1.0.1",
   "private": true,
   "homepage": "https://okeschwien.com",
   "dependencies": {

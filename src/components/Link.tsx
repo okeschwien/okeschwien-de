@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { COLOR_TEXT_LINK_HOVER, COLOR_TEXT_LINK_DEFAULT } from '../meta/colors'
-import { mediaQueryDesktop, isMobileViewport } from '../meta/mediaQueries'
+import { mediaQueryDesktop } from '../meta/mediaQueries'
 import { transitionColor } from '../meta/animations'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink, IconDefinition } from '@fortawesome/free-solid-svg-icons'
@@ -11,12 +11,12 @@ const LinkStyled = styled('a')`
   color: ${COLOR_TEXT_LINK_DEFAULT};
   ${mediaQueryDesktop} {
     transition: ${transitionColor()};
-    svg {
+    .link-icon {
       display: none;
     }
     :hover {
       color: ${COLOR_TEXT_LINK_HOVER};
-      svg {
+      .link-icon {
         display: inherit;
       }
     }
@@ -33,22 +33,13 @@ export interface LinkProps {
 }
 
 const Link = ({ url, children, icon = faLink }: LinkProps & ChildrenProps) => {
-  const isMobile = isMobileViewport()
-  const [showSpace, setShowSpace] = React.useState(isMobile)
-
-  const toggleShowSpace = () => setShowSpace(isMobile || !showSpace)
-
   return (
-    <LinkStyled
-      href={url}
-      rel='noopener noreferrer'
-      target='_blank'
-      onMouseEnter={toggleShowSpace}
-      onMouseLeave={toggleShowSpace}
-    >
+    <LinkStyled href={url} rel='noopener noreferrer' target='_blank'>
       {children}
-      {showSpace && ' '}
-      <FontAwesomeIcon icon={icon} />
+      <span className='link-icon'>
+        {' '}
+        <FontAwesomeIcon icon={icon} />
+      </span>
     </LinkStyled>
   )
 }

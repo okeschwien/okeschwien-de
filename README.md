@@ -1,4 +1,4 @@
-# Website: okeschwien.de
+# Website: okeschwien.com
 
-This is the source code for [okeschwien.de](https://www.okeschwien.de).
-Mainly built with React (CRA) and Emotion CSS.
+This is the source code for [okeschwien.com](https://www.okeschwien.com).
+Built with React, Emotion CSS and particles-js.

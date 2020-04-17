@@ -5,6 +5,7 @@ import About from './components/About'
 import styled from '@emotion/styled'
 import { mediaQueryDesktop, BREAKPOINTS } from './meta/mediaQueries'
 import Work from './components/Work'
+import Footer from './components/Footer'
 
 const AppStyled = styled('div')`
   width: 100%;
@@ -22,6 +23,7 @@ const App = () => {
       <About />
       <CurriculumVitae />
       <Work />
+      <Footer />
     </AppStyled>
   )
 }

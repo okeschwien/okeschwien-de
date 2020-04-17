@@ -5,8 +5,10 @@ import {
   faMeteor,
   faGraduationCap,
   faAnchor,
+  faTerminal,
 } from '@fortawesome/free-solid-svg-icons'
 import { calculateAge } from '../utils'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const TITLE = 'Oke Schwien'
 
@@ -177,3 +179,10 @@ export const WORK_ITEMS = {
     },
   ],
 }
+
+export const FOOTER_CONTENT = (
+  <>
+    <FontAwesomeIcon icon={faTerminal} />
+    {'  '}Hamburg {new Date().getFullYear()}
+  </>
+)

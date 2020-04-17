@@ -1,11 +1,6 @@
 import React from 'react'
 import List from './List'
-import {
-  CV_PERSONAL_INFORMATION,
-  CV_CAREER,
-  CV_UNIVERSITY,
-  CV_HEADLINE,
-} from '../meta/copy'
+import { CV_CAREER, CV_UNIVERSITY, CV_HEADLINE } from '../meta/copy'
 import styled from '@emotion/styled'
 
 export const H2Styled = styled('h2')`
@@ -21,7 +16,6 @@ export const H2Styled = styled('h2')`
 const CurriculumVitae = () => (
   <>
     <H2Styled>{CV_HEADLINE}</H2Styled>
-    <List {...CV_PERSONAL_INFORMATION} />
     <List {...CV_CAREER} />
     <List {...CV_UNIVERSITY} />
   </>

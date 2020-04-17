@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from '@emotion/styled'
 import { COLOR_TEXT_LINK_DEFAULT, COLOR_TEXT_LINK_HOVER } from '../meta/colors'
 import { mediaQueryDesktop } from '../meta/mediaQueries'
-import { transitionColor, transitionTransform } from '../meta/animations'
+import { transitionAll } from '../meta/animations'
 
 const IconLinkStyled = styled('a')`
   font-size: 2rem;
@@ -14,7 +14,7 @@ const IconLinkStyled = styled('a')`
   }
   ${mediaQueryDesktop} {
     svg {
-      transition: ${`${transitionColor()}, ${transitionTransform()}`};
+      transition: ${`${transitionAll()}}`};
       transform: initial;
     }
     :hover {

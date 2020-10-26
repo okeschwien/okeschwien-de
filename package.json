@@ -7,7 +7,7 @@
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^5.11.4",
@@ -21,7 +21,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "react-particles-js": "^3.3.0",
-    "typescript": "~3.9.7"
+    "typescript": "~4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

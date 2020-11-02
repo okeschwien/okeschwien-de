@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://okeschwien.com",
   "dependencies": {
-    "@emotion/core": "^10.0.35",
+    "@emotion/core": "^10.1.0",
     "@emotion/styled": "^10.0.27",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
